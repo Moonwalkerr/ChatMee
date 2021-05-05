@@ -1,5 +1,6 @@
 import './App.css';
 
+// BEM Naming convention
 function App() {
   return (
     <div className="App">
