@@ -1,12 +1,14 @@
 import './App.css';
+import Sidebar from './comps/sidebar';
 
 // BEM Naming convention
 function App() {
   return (
   <div className="app">
-     <h2>Whatsapp clone</h2>
-     <div className="innerApp">
+     {/* <h2>Folks Chat</h2> */}
+     <div className="inner__App">
       {/* SideBar */}
+      <Sidebar/>
       {/* Chat */}
      </div>
     </div>
