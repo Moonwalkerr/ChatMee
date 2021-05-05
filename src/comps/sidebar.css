@@ -1,4 +1,6 @@
 .sidebar{
+    display:flex;
+    flex-direction: column;
     flex: 0.35;
 }
 
@@ -21,4 +23,17 @@
     margin-right:2vw;
     font-size:24px !important;
 
+}
+
+
+.sidebar__search{
+    display:flex;
+    align-items:center;
+    justify-content:space-between;
+}
+
+.sidebar__search > input{
+    width:100%;
+    margin:0px 0.5vw;
+    height:3vh;
 }
