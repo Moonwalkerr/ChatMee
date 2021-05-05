@@ -20,7 +20,8 @@ const ChatDisplay = () => {
 
     const sendMsg = (e) => {
         e.preventDefault();
-        console.log("New msg", input)
+        console.log("New msg", input);
+        setInput("");
     }
 
     return ( <div className="chatDisplay">
