@@ -50,7 +50,7 @@ const ChatDisplay = () => {
             </div>
 
             <div className="chat__footer">
-                 <IconButton>
+                <IconButton>
                 <InsertEmoticonIcon/>
                  </IconButton>
                 <form><TextField 
