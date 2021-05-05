@@ -52,6 +52,9 @@
 .sidebar__searchContainer > input{
     border:none;
     margin-left:10px;
+    height:4vh;
+    font-size:18px;
+    padding:5px;
 }
 
 .sidebar__searchContainer > .MuiSvgIcon-root{
