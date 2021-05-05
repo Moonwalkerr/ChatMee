@@ -67,3 +67,10 @@
     margin-left:10px;
     font-size:xx-small;
 }
+
+
+/* Chat Receiver */
+.chat__receiver{
+    margin-left:auto;
+    background-color:#dcf8c6;
+}
