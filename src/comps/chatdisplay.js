@@ -6,14 +6,22 @@ import MoreVertIcon from '@material-ui/icons/MoreVert';
 import AttachFileIcon from '@material-ui/icons/AttachFile';
 import InsertEmoticonIcon from '@material-ui/icons/InsertEmoticon';
 import MicIcon from '@material-ui/icons/Mic';
+import TextField from '@material-ui/core/TextField';
 
 const ChatDisplay = () => {
 
     const [seed,setSeed] = useState("");
 
+    const [input,setInput] = useState("");
+
     useEffect(() =>{
        setSeed(Math.floor(Math.random()*5000)); 
     },[])
+
+    const sendMsg = (e) => {
+        e.preventDefault();
+        console.log("New msg", input)
+    }
 
     return ( <div className="chatDisplay">
             <div className="chat__header">
@@ -42,13 +50,26 @@ const ChatDisplay = () => {
             </div>
 
             <div className="chat__footer">
+                 <IconButton>
                 <InsertEmoticonIcon/>
-                <form action="">
-                    <input type="text" name="" id=""/>
+                 </IconButton>
+                <form><TextField 
+                      className="chat__footerInput"
+                      value={input}
+                    onChange={(e)=>setInput(e.target.value)}
+                id="outlined-basic" label="Type your text here" variant="outlined" />
+                    {/* <input type="text" 
+                      value={input}
+                    onChange={(e)=>setInput(e.target.value)} /> */}
+                <button
+                type="submit"
+                onClick={sendMsg}
+                >Send</button>
                 </form>
-
-                <MicIcon/>
-            </div>
+            <IconButton>
+            <MicIcon/>
+            </IconButton>
+        </div>
     </div> );
 }
  

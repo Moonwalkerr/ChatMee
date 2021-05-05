@@ -68,9 +68,41 @@
     font-size:xx-small;
 }
 
-
 /* Chat Receiver */
 .chat__receiver{
     margin-left:auto;
     background-color:#dcf8c6;
+}
+
+
+
+/* Chat Footer */
+
+.chat__footer{
+    display:flex;
+    justify-content:space-between;
+    height:62px;
+    border-top:1px solid lightgray;
+    align-items: center;
+}
+
+.chat__footer > form{
+    flex:1;
+    display:flex;
+}
+
+.chat__footerInput {
+    flex:1;
+    border-radius: 30px;
+    font-size:26px ;
+    background-color:white;
+}
+
+.chat__footer > form > button{
+    display:none;
+}
+
+.chat__footer > .MuiSvgIcon{
+    padding:10px;
+    color:gray;
 }
