@@ -1,6 +1,7 @@
 import {Avatar} from "@material-ui/core";
 import {useState, useEffect} from "react";
-import "./sidebarChat.css"
+import "./sidebarChat.css";
+import database from "../keys/firebaseConfig";
 
 const SidebarChat = ({addNewChat,id,name}) => {
     
@@ -14,9 +15,11 @@ const SidebarChat = ({addNewChat,id,name}) => {
     ]);
 
     const createChat = () => {
-         const roomName = prompt("Please Enter The New Room Name");
+         const roomName = prompt("Please Enter The New Chat Room Name");
          if(roomName){
-            //  do smtng
+             database.collection("rooms").add({
+                 name:roomName
+             });
          }
     }
 
