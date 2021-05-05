@@ -1,4 +1,4 @@
-## Chat Mee ! is a Full Stack Web Application based on functionalities similar to WhatsApp. Build Using React and Firebase
+## Folks Chat ! is a Full Stack Web Application based on functionalities similar to WhatsApp. Build Using React and Firebase
 
 
 ## Available Scripts
