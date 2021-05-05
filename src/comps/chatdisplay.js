@@ -33,7 +33,19 @@ const ChatDisplay = () => {
         </div>
             </div>
             <div className="chat__body">
-
+                <p className="chat__message">
+                    <span className="chat__bodyName">AbhiMishra</span>
+                    Hey Guys <span className="chat__bodyTimestamp">3:15 pm</span>
+                </p>
+                <p className="chat__message">
+                    <span className="chat__bodyName">AbhiMishra</span>
+                    Hey Guys <span className="chat__bodyTimestamp">3:15 pm</span>
+                </p>
+                <p className="chat__message">
+                    <span className="chat__bodyName">AbhiMishra</span>
+                    Hey Guys
+                <span className="chat__bodyTimestamp">3:15 pm</span>
+                </p>
             </div>
 
             <div className="chat__footer">
