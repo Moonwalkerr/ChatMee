@@ -2,7 +2,7 @@ import {Avatar} from "@material-ui/core";
 import {useState, useEffect} from "react";
 import "./sidebarChat.css"
 
-const SidebarChat = () => {
+const SidebarChat = ({addNewChat}) => {
     
     const [seed,setSeed] = useState("");
 
@@ -13,6 +13,13 @@ const SidebarChat = () => {
 
     ]);
 
+    const createChat = () => {}
+
+    if(addNewChat){
+     return  <div onClick={createChat} className="sidebarChat">
+            <h2>Add New Chat +</h2>
+        </div>
+    }
 
     return ( <div className="sidebarChat">
       <Avatar src={`https://avatars.dicebear.com/api/human/${seed}.svg`}/>

@@ -26,11 +26,7 @@ const Sidebar = () => {
         </div>
 
         <div className="sidebar__chats">
-            <SidebarChat/>
-            <SidebarChat/>
-            <SidebarChat/>
-            <SidebarChat/>
-            <SidebarChat/>
+            <SidebarChat addNewChat/>
             <SidebarChat/>
             <SidebarChat/>
             <SidebarChat/>
