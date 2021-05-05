@@ -4,6 +4,8 @@ import {useState, useEffect} from "react";
 import SearchOutlinedIcon from '@material-ui/icons/SearchOutlined';
 import MoreVertIcon from '@material-ui/icons/MoreVert';
 import AttachFileIcon from '@material-ui/icons/AttachFile';
+import InsertEmoticonIcon from '@material-ui/icons/InsertEmoticon';
+import MicIcon from '@material-ui/icons/Mic';
 
 const ChatDisplay = () => {
 
@@ -28,7 +30,7 @@ const ChatDisplay = () => {
         <AttachFileIcon/>
         </IconButton>
         <IconButton>
-        <AttachFileIcon/>
+        <MoreVertIcon/>
         </IconButton>
         </div>
             </div>
@@ -40,7 +42,12 @@ const ChatDisplay = () => {
             </div>
 
             <div className="chat__footer">
+                <InsertEmoticonIcon/>
+                <form action="">
+                    <input type="text" name="" id=""/>
+                </form>
 
+                <MicIcon/>
             </div>
     </div> );
 }
