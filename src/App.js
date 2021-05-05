@@ -1,4 +1,5 @@
 import './App.css';
+import ChatDisplay from './comps/chatdisplay';
 import Sidebar from './comps/sidebar';
 
 // BEM Naming convention
@@ -7,9 +8,8 @@ function App() {
   <div className="app">
      {/* <h2>Folks Chat</h2> */}
      <div className="inner__App">
-      {/* SideBar */}
       <Sidebar/>
-      {/* Chat */}
+      <ChatDisplay/>
      </div>
     </div>
   );
