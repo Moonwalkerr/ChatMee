@@ -13,7 +13,12 @@ const SidebarChat = ({addNewChat}) => {
 
     ]);
 
-    const createChat = () => {}
+    const createChat = () => {
+         const roomName = prompt("Please Enter The New Room Name");
+         if(roomName){
+            //  do smtng
+         }
+    }
 
     if(addNewChat){
      return  <div onClick={createChat} className="sidebarChat">
