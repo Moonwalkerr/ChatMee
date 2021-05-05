@@ -9,4 +9,12 @@ import firebase from "firebase/app";
     appId: "1:438626215482:web:ee782c8c31bb9544fb7703"
   };
   // Initialize Firebase
-  firebase.initializeApp(firebaseConfig);
+const firebaseApp = firebase.initializeApp(firebaseConfig);
+
+const database = firebaseApp.firestore();
+const auth = firebase.auth();
+const provider = new firebase.auth.GoogleAuthProvider();
+
+
+export { auth, provider};
+export default database;
