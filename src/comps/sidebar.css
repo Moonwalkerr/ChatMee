@@ -58,3 +58,11 @@
     color:gray;
     padding:10px;
 }
+
+
+.sidebar__chats{
+    margin-top:1.4vh;
+    flex:1;
+    background-color:white;
+    overflow:scroll;
+}
