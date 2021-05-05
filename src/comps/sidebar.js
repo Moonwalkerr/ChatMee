@@ -15,12 +15,17 @@ const Sidebar = () => {
     
     useEffect(()=>{     // realtime snapshot update every time data is updated on firebase
         // Realtime listener and updates the rooms var
-        database.collection("rooms").onSnapshot(snap=>{
+    const unSubscribe = database.collection("rooms").onSnapshot(snap=>{
                 setRooms(snap.docs.map(doc=>({
                     id:doc.id,
                     data:doc.data(),
                 })))
-        })
+        });
+
+        // Cleanup function
+        return ()=>{
+            unSubscribe();
+        }
     },[])
 
 
