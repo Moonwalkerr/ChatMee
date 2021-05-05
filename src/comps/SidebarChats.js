@@ -1,6 +1,6 @@
 import {Avatar} from "@material-ui/core";
 import {useState, useEffect} from "react";
-
+import "./sidebarChat.css"
 
 const SidebarChat = () => {
     
@@ -9,7 +9,9 @@ const SidebarChat = () => {
 
     useEffect(() => {
         setSeed(Math.floor(Math.random()* 5000))
-    },[]);
+    },[
+
+    ]);
 
 
     return ( <div className="sidebarChat">
