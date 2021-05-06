@@ -56,9 +56,17 @@
     margin-bottom:30px;
     font-size:16px;
     padding:10px;
-    background-color:#ffffff;
+    color:#ffffff;
+    background-color:#333;
     border-radius: 10px;
 }
+
+/* Chat Receiver */
+.chat__receiver {
+    margin-left: auto;
+    background-color: #19489fde;
+}
+
 
 .chat__bodyName {
     position:absolute;
@@ -70,12 +78,6 @@
 .chat__bodyTimestamp{
     margin-left:10px;
     font-size:xx-small;
-}
-
-/* Chat Receiver */
-.chat__receiver{
-    margin-left:auto;
-    background-color:#dcf8c6;
 }
 
 
