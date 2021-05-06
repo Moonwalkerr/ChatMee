@@ -59,6 +59,7 @@ const Sidebar = () => {
                 return  <SidebarChat
                 key={room.id}
                 name={room.data.name}
+                id={room.id}
                 />
 
             })}

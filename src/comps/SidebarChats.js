@@ -31,9 +31,8 @@ const SidebarChat = ({addNewChat,id,name}) => {
 
     return ( 
     <Link to={`/rooms/${id}`}>
-        {console.log(id)}
     <div
-    id={id}
+    key={id}
     className="sidebarChat">
       <Avatar src={`https://avatars.dicebear.com/api/human/${seed}.svg`}/>
       <div className="sidebarChat__info">
