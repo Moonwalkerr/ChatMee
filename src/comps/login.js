@@ -1,8 +1,13 @@
 import "./login.css";
 import {Button} from "@material-ui/core";
+import {auth, provider} from "../keys/firebaseConfig";
 
 const Login = () => {
-    const signIn = ()=> {}
+    const signIn = ()=> {
+        auth.signInWithPopup(provider)
+        .then(res=>console.log(res))
+        .catch(err=>alert(err.message));
+    }
     return ( <div className="login">
         <div className="login__container">
             <img className="image" src="https://images-platform.99static.com//n7liZzsSMdHX6uDJpYOA2QTUVeA=/163x13:1335x1185/fit-in/500x500/99designs-contests-attachments/116/116335/attachment_116335822" alt="" />
