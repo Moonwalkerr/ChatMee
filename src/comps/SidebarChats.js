@@ -2,7 +2,7 @@ import {Avatar} from "@material-ui/core";
 import {useState, useEffect} from "react";
 import "./sidebarChat.css";
 import database from "../keys/firebaseConfig";
-
+import {Link} from "react-router-dom";
 const SidebarChat = ({addNewChat,id,name}) => {
     
     const [seed,setSeed] = useState("");
@@ -29,7 +29,9 @@ const SidebarChat = ({addNewChat,id,name}) => {
         </div>
     }
 
-    return ( <div
+    return ( 
+    <Link to={`/rooms/${id}`}>
+    <div
     id={id}
     className="sidebarChat">
       <Avatar src={`https://avatars.dicebear.com/api/human/${seed}.svg`}/>
@@ -37,8 +39,9 @@ const SidebarChat = ({addNewChat,id,name}) => {
           <h2>{name}</h2>
           <p>Last Message....</p>
       </div>
-
-    </div> );
+    </div> 
+        </Link>
+    );
 }
  
 export default SidebarChat;
