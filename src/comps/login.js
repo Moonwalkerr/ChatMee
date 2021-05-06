@@ -21,7 +21,7 @@ const Login = () => {
     }
     return ( <div className="login">
         <div className="login__container">
-            <img className="image" src="./assets/FolksChatFavicon.png" alt="" />
+            <img className="image" src="https://raw.githubusercontent.com/Moonwalkerr/FolksChat/test/public/FolksChatFavicon.png" alt="" />
             <div className="login__text">
                 <h1>Sign In to Folks Chat</h1>
             <Button className="login__btn"  onClick={signIn}>
