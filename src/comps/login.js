@@ -23,7 +23,7 @@ const Login = () => {
             <img className="image" src="https://images-platform.99static.com//n7liZzsSMdHX6uDJpYOA2QTUVeA=/163x13:1335x1185/fit-in/500x500/99designs-contests-attachments/116/116335/attachment_116335822" alt="" />
             <div className="login__text">
                 <h1>Sign In to Folks Chat</h1>
-            <Button  onClick={signIn}>
+            <Button className="login__btn"  onClick={signIn}>
                 Sign In With Google
             </Button>
             </div>

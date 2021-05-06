@@ -19,13 +19,13 @@
     height:200px;
 }
 
- Button{
+ .login__btn {
     margin-top:50px !important;
     text-transform: inherit !important;
     background-color:#19479F !important;
     color:white !important;
     box-shadow:1px 6px 12px rgba(0, 0, 0, 0.349);
 }
-Button:hover{
+.login__btn:hover {
     background-color:#19489fde !important;
 }
