@@ -2,9 +2,8 @@ import './App.css';
 import ChatDisplay from './comps/chatdisplay';
 import Sidebar from './comps/sidebar';
 import {BrowserRouter as Router, Switch, Route} from "react-router-dom";
-import {useState} from "react";
 import Login from './comps/login';
-import {useStateValue} from "../stateProvider";
+import {useStateValue} from "./stateProvider";
 
 
 
