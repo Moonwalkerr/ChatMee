@@ -1,11 +1,21 @@
 import "./login.css";
 import {Button} from "@material-ui/core";
 import {auth, provider} from "../keys/firebaseConfig";
+import {useStateValue, action} from "../reducer/reducer";
 
 const Login = () => {
+
+    const [{},dispatch] = useStateValue();
+
     const signIn = ()=> {
         auth.signInWithPopup(provider)
-        .then(res=>console.log(res))
+        .then(res=>{
+            // Pushing the user details to centralized data layer
+            dispatch({
+                type:action.SET_USER,
+                user:res.name,
+            });
+        })
         .catch(err=>alert(err.message));
     }
     return ( <div className="login">
