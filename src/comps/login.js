@@ -13,7 +13,7 @@ const Login = () => {
             // Pushing the user details to centralized data layer
             dispatch({
                 type:action.SET_USER,
-                user:res.name,
+                user:res.user,
             });
         })
         .catch(err=>alert(err.message));
