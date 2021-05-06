@@ -10,7 +10,7 @@ import {useStateValue} from "./stateProvider";
 //Using BEM Naming convention throughout the app code
 function App() {
 
-  const [{user}, dispatch] = useStateValue();
+  const [{user}] = useStateValue()[0];
   return ( <div className="app">
     {!user ? <Login/>:<div className="inner__App">
       <Router>

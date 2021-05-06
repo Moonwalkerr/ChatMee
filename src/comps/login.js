@@ -6,7 +6,7 @@ import {useStateValue} from "../stateProvider";
 
 const Login = () => {
 
-    const [{},dispatch] = useStateValue();
+    const [dispatch] = useStateValue()[1];
 
     const signIn = ()=> {
         auth.signInWithPopup(provider)
