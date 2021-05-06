@@ -10,12 +10,13 @@ function App() {
      <div className="inner__App">
       <Router>
       <Switch>
-      <Route path="/app">
       <Sidebar/>
+      <Route path="/rooms/:roomID">
       <ChatDisplay/>  
       </Route>
       <Route exact path="/">
-        <h1>Home Screen</h1>
+      {/* <ChatDisplay/>   */}
+        {/* <h1>Home Screen</h1> */}
       </Route>
       </Switch>
       </Router>
