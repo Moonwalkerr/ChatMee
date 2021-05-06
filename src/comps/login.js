@@ -1,7 +1,8 @@
 import "./login.css";
 import {Button} from "@material-ui/core";
 import {auth, provider} from "../keys/firebaseConfig";
-import {useStateValue, action} from "../reducer/reducer";
+import {action} from "../reducer/reducer";
+import {useStateValue} from "../stateProvider";
 
 const Login = () => {
 
