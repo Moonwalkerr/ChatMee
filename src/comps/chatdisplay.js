@@ -74,7 +74,7 @@ const ChatDisplay = () => {
              { messages.map(message =>{
             return  <p
             className={`chat__message 
-            ${message.name == user.displayName && "chat__receiver"}` // In real world production mode we must not check using displayName as many users can have same name , so we can check using user.id and other methods provided by google auth
+            ${message.name === user.displayName && "chat__receiver"}` // In real world production mode we must not check using displayName as many users can have same name , so we can check using user.id and other methods provided by google auth
             }>
             <span className="chat__bodyName">{message.name}</span>
             {message.message}
