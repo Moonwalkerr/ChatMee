@@ -31,6 +31,7 @@ const SidebarChat = ({addNewChat,id,name}) => {
 
     return ( 
     <Link to={`/rooms/${id}`}>
+        {console.log(id)}
     <div
     id={id}
     className="sidebarChat">
