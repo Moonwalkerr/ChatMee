@@ -9,25 +9,29 @@ import AttachFileIcon from '@material-ui/icons/AttachFile';
 import InsertEmoticonIcon from '@material-ui/icons/InsertEmoticon';
 import MicIcon from '@material-ui/icons/Mic';
 import TextField from '@material-ui/core/TextField';
-
+import {useStateValue} from "../stateProvider";
+import {timestamp} from "../keys/firebaseConfig";
 
 const ChatDisplay = () => {
 
     const [seed,setSeed] = useState("");
-
-    const [input,setInput] = useState("");
-
+    const [input,setInput] = useState("");    
     const {roomId} = useParams();   
     const [roomName, setRoomName] = useState("");
+    const [messages, setMessages] = useState([]);
+    const [{user},dispatch] = useStateValue();
+    dispatch({type:"noe"});
 
     useEffect(()=>{ 
          if(roomId){
-            database.collection("rooms").doc(roomId).onSnapshot(snap=>{
-            setRoomName(snap.data().name);
+        database.collection("rooms").doc(roomId).onSnapshot(snap=>{
+        setRoomName(snap.data().name);
+         database.collection('rooms').doc(roomId).collection("messages").orderBy("timestamp","asc").onSnapshot(snapshot => {
+                setMessages(snapshot.docs.map(doc => doc.data()))
+            });
         });
-        console.log(roomId);
     }
-    },[roomId]);
+    },[roomId,messages]);
 
     useEffect(() =>{
        setSeed(Math.floor(Math.random()*5000)); 
@@ -36,6 +40,14 @@ const ChatDisplay = () => {
     const sendMsg = (e) => {
         e.preventDefault();
         console.log("New msg", input);
+        database.collection("rooms")
+        .doc(roomId)
+        .collection("messages")
+        .add({
+            message:input,
+            name:user.displayName,
+            timestamp:timestamp,
+        })
         setInput("");
     }
 
@@ -47,22 +59,26 @@ const ChatDisplay = () => {
                 <p>Last seen ...</p>
             </div>
              <div className="chat__headerRight">
-        <IconButton>
-        <SearchOutlinedIcon/>
-        </IconButton>
-        <IconButton>
-        <AttachFileIcon/>
-        </IconButton>
-        <IconButton>
-        <MoreVertIcon/>
-        </IconButton>
+            <IconButton>
+            <SearchOutlinedIcon/>
+            </IconButton>
+            <IconButton>
+            <AttachFileIcon/>
+            </IconButton>
+            <IconButton>
+            <MoreVertIcon/>
+            </IconButton>
         </div>
             </div>
             <div className="chat__body">
-                <p className={`chat__message ${true && "chat__receiver"}`}>
-                    <span className="chat__bodyName">AbhiMishra</span>
-                    Hey Guys <span className="chat__bodyTimestamp">3:15 pm</span>
-                </p>
+             { messages.map(message =>{
+            return  <p className={`chat__message ${true && "chat__receiver"}`}>
+            <span className="chat__bodyName">{message.name}</span>
+            {message.message}
+            <span className="chat__bodyTimestamp">{new Date(message.timestamp?.toDate()).toUTCString()}</span>
+            </p>
+             })
+             }
             </div>
 
             <div className="chat__footer">
@@ -74,9 +90,6 @@ const ChatDisplay = () => {
                       value={input}
                     onChange={(e)=>setInput(e.target.value)}
                 id="outlined-basic" label="Type your text here" variant="outlined" />
-                    {/* <input type="text" 
-                      value={input}
-                    onChange={(e)=>setInput(e.target.value)} /> */}
                 <button
                 type="submit"
                 onClick={sendMsg}
