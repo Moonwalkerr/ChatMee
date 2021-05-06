@@ -34,6 +34,10 @@
     min-width: 100ox;
 }
 
+.chat__headerInfo__lastSeen{
+    font-size:12px;
+    font-weight:600;
+}
 
 /* Chat Body */
 .chat__body {
