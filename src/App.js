@@ -11,6 +11,7 @@ import {useStateValue} from "./stateProvider";
 function App() {
 
   const [{user},dispatch] = useStateValue();
+  dispatch({type:"noe"});
   return ( <div className="app">
     {!user ? <Login/>:<div className="inner__App">
       <Router>
