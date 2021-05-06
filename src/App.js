@@ -2,12 +2,14 @@ import './App.css';
 import ChatDisplay from './comps/chatdisplay';
 import Sidebar from './comps/sidebar';
 import {BrowserRouter as Router, Switch, Route} from "react-router-dom";
-
+import {useState} from "react";
+import Login from './comps/login';
 // BEM Naming convention
 function App() {
-  return (
-  <div className="app">
-     <div className="inner__App">
+
+const [user,setUser] = useState("");
+  return ( <div className="app">
+    {!user ? <Login/>:<div className="inner__App">
       <Router>
       <Sidebar/>
       <Switch>
@@ -20,9 +22,10 @@ function App() {
       </Switch>
       </Router>
       
-     </div>
-    </div>
-  );
-}
-
-export default App;
+      </div>
+      }
+      </div>);
+    }
+    
+    export default App;
+    
