@@ -21,7 +21,7 @@ function App() {
       <ChatDisplay/>  
       </Route>
       <Route exact path="/">
-      <ChatDisplay/>  
+      {/* <ChatDisplay/>   */}
       </Route>
       </Switch>
       </Router>
