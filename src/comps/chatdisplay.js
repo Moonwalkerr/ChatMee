@@ -1,6 +1,7 @@
 import "./chatdisplay.css";
 import {Avatar, IconButton} from "@material-ui/core";
 import {useState, useEffect} from "react";
+import {useParams} from "react-router-dom";
 import SearchOutlinedIcon from '@material-ui/icons/SearchOutlined';
 import MoreVertIcon from '@material-ui/icons/MoreVert';
 import AttachFileIcon from '@material-ui/icons/AttachFile';
@@ -8,11 +9,14 @@ import InsertEmoticonIcon from '@material-ui/icons/InsertEmoticon';
 import MicIcon from '@material-ui/icons/Mic';
 import TextField from '@material-ui/core/TextField';
 
+
 const ChatDisplay = () => {
 
     const [seed,setSeed] = useState("");
 
     const [input,setInput] = useState("");
+
+    const {roomId} = useParams();   
 
     useEffect(() =>{
        setSeed(Math.floor(Math.random()*5000)); 
