@@ -31,7 +31,7 @@ const ChatDisplay = () => {
 
     useEffect(() =>{
        setSeed(Math.floor(Math.random()*5000)); 
-    },[])
+    },[roomId])
 
     const sendMsg = (e) => {
         e.preventDefault();
