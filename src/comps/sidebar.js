@@ -7,13 +7,17 @@ import MoreVertIcon from '@material-ui/icons/MoreVert';
 import SearchOutlinedIcon from '@material-ui/icons/SearchOutlined';
 import SidebarChat from "./SidebarChats";
 import database from "../keys/firebaseConfig";
+import {useStateValue} from "../stateProvider";
 
 
 const Sidebar = () => {
 
+  const [{user},dispatch] = useStateValue();
+  dispatch({type:"noe"});
     const [rooms, setRooms] = useState([]);
     
-    useEffect(()=>{     // realtime snapshot update every time data is updated on firebase
+    useEffect(()=>{     
+        // realtime snapshot update every time data is updated on firebase
         // Realtime listener and updates the rooms var
     const unSubscribe = database.collection("rooms").onSnapshot(snap=>{
                 setRooms(snap.docs.map(doc=>({
@@ -31,7 +35,7 @@ const Sidebar = () => {
 
     return ( <div className="sidebar">
         <div className="sidebar__header">
-        <Avatar/>
+        <Avatar src={user?user.photoURL:""}/>
         <div className="sidebar__headerRight">
         <IconButton>
         <ChatIcon/>
