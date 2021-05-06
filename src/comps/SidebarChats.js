@@ -23,7 +23,7 @@ const SidebarChat = ({addNewChat,id,name}) => {
                         setMessages(snap.docs.map(doc=>doc.data()))
                 ))
             }
-    },[])
+    },[id])
 
     const createChat = () => {
          const roomName = prompt("Please Enter The New Chat Room Name");
