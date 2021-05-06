@@ -1,5 +1,4 @@
-## Folks Chat ! is a Full Stack Web Application based on functionalities similar to WhatsApp. Build Using React and Firebase
-
+## Folks Chat ! is a Full Stack Web Application Built Using React and Firebase based on functionalities similar to WhatsApp Web Group Chats. 
 
 ## Available Scripts
 
