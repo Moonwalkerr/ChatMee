@@ -4,10 +4,14 @@ import Sidebar from './comps/sidebar';
 import {BrowserRouter as Router, Switch, Route} from "react-router-dom";
 import {useState} from "react";
 import Login from './comps/login';
-// BEM Naming convention
+import {useStateValue} from "../stateProvider";
+
+
+
+//Using BEM Naming convention throughout the app code
 function App() {
 
-const [user,setUser] = useState("");
+  const [{user}, dispatch] = useStateValue();
   return ( <div className="app">
     {!user ? <Login/>:<div className="inner__App">
       <Router>
