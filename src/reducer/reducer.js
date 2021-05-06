@@ -14,6 +14,7 @@ const reducer = (state, action) =>{
                 user: action.user
 
             }
+        default: return state
     }
 }
 
