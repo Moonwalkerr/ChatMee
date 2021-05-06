@@ -72,7 +72,10 @@ const ChatDisplay = () => {
             </div>
             <div className="chat__body">
              { messages.map(message =>{
-            return  <p className={`chat__message ${true && "chat__receiver"}`}>
+            return  <p
+            className={`chat__message 
+            ${message.name == user.displayName && "chat__receiver"}` // In real world production mode we must not check using displayName as many users can have same name , so we can check using user.id and other methods provided by google auth
+            }>
             <span className="chat__bodyName">{message.name}</span>
             {message.message}
             <span className="chat__bodyTimestamp">{new Date(message.timestamp?.toDate()).toUTCString()}</span>
