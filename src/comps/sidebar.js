@@ -8,7 +8,7 @@ import SearchOutlinedIcon from '@material-ui/icons/SearchOutlined';
 import SidebarChat from "./SidebarChats";
 import database from "../keys/firebaseConfig";
 import {useStateValue} from "../stateProvider";
-
+import LogoutBtn from "./logoutBtn";
 
 const Sidebar = () => {
 
@@ -37,15 +37,15 @@ const Sidebar = () => {
         <div className="sidebar__header">
         <Avatar src={user?user.photoURL:""}/>
         <div className="sidebar__headerRight">
+        {/* <IconButton >
+        <ChatIcon style={{display:'none'}}/>
+        </IconButton> */}
         <IconButton>
-        <ChatIcon/>
+        <LogoutBtn/>
         </IconButton>
-        <IconButton>
-        <DonutLargeIcon/>
-        </IconButton>
-        <IconButton>
+        {/* <IconButton>
         <MoreVertIcon/>    
-        </IconButton>
+        </IconButton> */}
         </div>    
         </div>
         <div className="sidebar__search">
