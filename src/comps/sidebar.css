@@ -7,9 +7,11 @@
 
 .sidebar__header{
     display:flex;
+
     justify-content:space-between;
     padding:20px;
-    border:1px solid lightgray;
+    border-bottom:1px solid lightgray;
+    border-right:1px solid lightgray;
 }
 
 .sidebar__headerRight{
