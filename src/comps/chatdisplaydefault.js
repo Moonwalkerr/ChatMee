@@ -1,6 +1,6 @@
 const ChatDisplayDefault = () => {
     return ( <div style={{
-        flex:1,
+        flex:"0.55",
         padding:"100px",
         textAlign:"center",
         backgroundColor:"white",
