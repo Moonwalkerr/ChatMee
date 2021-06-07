@@ -1,21 +1,18 @@
-## Folks Chat ! is a Full Stack Web Application Built Using React and Firebase based on functionalities similar to WhatsApp Web Group Chats. 
+## Folks Chat :
+- A Full Stack Web Application Built Using React and Firebase
+- A Group Chat Application for users
+<!-- ### The Movie Database (TMDB) APIused
+- [[The Movie Database]](http://themoviedb.org/r) -->
 
-## Available Scripts
 
-In the project directory, you can run:
-
-### `npm start`
-
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
-
-The page will reload if you make edits.\
-You will also see any lint errors in the console.
-
-### `npm test`
-
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
-
-### `npm run build`
-
+## Features :
+- Create New Chat room
+- User Authentication using Google
+- Real time instant chats
+  
+## Tech Stack Used :
+-   React js
+-   Firebase Google Authentication
+-   Firebase Firestore 
+-   Material UI
+-   React Context API
